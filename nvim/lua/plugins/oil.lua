@@ -17,7 +17,8 @@ return {
 				show_hidden = true
 			}, 
 			keymaps = {
-				[ "o" ] = "actions.select" 
+				[ "o" ] = "actions.select", 
+				[ "q" ] = { "actions.close", mode = "n" }
 			}
 		})
 
