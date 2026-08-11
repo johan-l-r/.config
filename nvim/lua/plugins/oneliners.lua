@@ -1,2 +1,5 @@
 -- plugins that require one line 
-return { "alexghergh/nvim-tmux-navigation" }
+return { 
+	{ "alexghergh/nvim-tmux-navigation" }, 
+	{ "neovim/nvim-lspconfig" }
+}
