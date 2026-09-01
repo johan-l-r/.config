@@ -1,0 +1,8 @@
+// options
+configuration {
+	modes: "drun,window,run";
+	font: "mononoki 16";
+	case-smart: true;
+	matching: "fuzzy";
+	location: 2;
+}
