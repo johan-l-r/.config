@@ -1,8 +1,45 @@
 // options
 configuration {
 	modes: "drun,window,run";
-	font: "mononoki 16";
+	font: "mononoki 18";
 	case-smart: true;
 	matching: "fuzzy";
 	location: 2;
+}
+
+// variables 
+* {
+	bg-clr: #080808;
+	fg-clr: #bdbdbd;
+
+	active-bg-clr: @fg-clr;
+	active-fg-clr: @bg-clr;
+	
+	md-spacing: 16px;
+
+	// remove that ugly dotted border below inputbar
+	separatorcolor: transparent;
+}
+
+// theme
+window {
+	background-color: @bg-clr;
+	padding: 0;
+	width: 640px;
+}
+entry {
+	placeholder: "";
+}
+listview {
+	scrollbar: false;
+	lines: 10;
+}
+element normal.normal, 
+element alternate.normal {
+	background-color: @bg-clr;
+	text-color: @fg-clr;
+}
+element selected.normal {
+	background-color: @active-bg-clr;
+	text-color: @active-fg-clr;
 }
