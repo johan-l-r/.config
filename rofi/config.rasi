@@ -4,7 +4,6 @@ configuration {
 	font: "mononoki 18";
 	case-smart: true;
 	matching: "fuzzy";
-	location: 2;
 }
 
 // variables 
@@ -24,11 +23,25 @@ configuration {
 // theme
 window {
 	background-color: @bg-clr;
-	padding: 0;
+	padding: 300px 600px;
 	width: 640px;
+	fullscreen: true;
+}
+inputbar {
+	margin: 0 0 10px 0;
+}
+prompt {
+	margin: 0 10px 0 0;
+}
+textbox-prompt-colon {
+	enabled: false;
 }
 entry {
 	placeholder: "";
+}
+prompt, 
+entry {
+	text-color: @fg-clr;
 }
 listview {
 	scrollbar: false;
