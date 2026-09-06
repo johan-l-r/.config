@@ -4,20 +4,31 @@ configuration {
 	font: "mononoki 18";
 	case-smart: true;
 	matching: "fuzzy";
+	transparency: "real";
+	// remove that ugly dotted border below inputbar
+	separatorcolor: transparent;
+
+	// keybinds
+	kb-element-next: "";
+	kb-remove-to-eol: "";
+	kb-remove-to-sol: "";
+
+	kb-accept-entry: "Return";
+	kb-mode-next: "Tab";
+	kb-mode-previous: "Control+Tab";
+	kb-row-up: "Control+k";
+	kb-row-down: "Control+j";
 }
 
 // variables 
 * {
-	bg-clr: #080808;
-	fg-clr: #bdbdbd;
+	bg-clr: #08080890;
+	fg-clr: #bdbdbd90;
 
 	active-bg-clr: @fg-clr;
 	active-fg-clr: @bg-clr;
 	
 	md-spacing: 16px;
-
-	// remove that ugly dotted border below inputbar
-	separatorcolor: transparent;
 }
 
 // theme
@@ -28,6 +39,7 @@ window {
 	fullscreen: true;
 }
 inputbar {
+	children: [ "prompt", "entry" ];
 	margin: 0 0 10px 0;
 }
 prompt {
@@ -37,7 +49,7 @@ textbox-prompt-colon {
 	enabled: false;
 }
 entry {
-	placeholder: "";
+	placeholder: "app name";
 }
 prompt, 
 entry {
@@ -46,10 +58,17 @@ entry {
 listview {
 	scrollbar: false;
 	lines: 10;
+	border: 1px;
+	border-color: @fg-clr;
+	padding: 0;
+	fixed-height: true;
+}
+element {
+	padding: 5px 10px;
 }
 element normal.normal, 
 element alternate.normal {
-	background-color: @bg-clr;
+	background-color: transparent;
 	text-color: @fg-clr;
 }
 element selected.normal {
