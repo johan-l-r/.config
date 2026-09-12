@@ -20,3 +20,20 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("n", "<leader>ld", vim.diagnostic.open_float, { desc = "open diagnostics with floating window" })
 	end
 })
+
+-- diagnostics
+vim.diagnostic.config({
+	signs = {
+		text = {
+			[vim.diagnostic.severity.ERROR] = "",
+			[vim.diagnostic.severity.WARN] = "",
+
+		}, 
+		linehl = {
+			[vim.diagnostic.severity.ERROR] = 'ErrorMsg',
+		},
+		numhl = {
+			[vim.diagnostic.severity.WARN] = 'WarningMsg',
+		},
+	} 
+})
