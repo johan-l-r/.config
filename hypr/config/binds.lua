@@ -5,11 +5,12 @@ local ZOOM_TOGGLE_FACTOR = 1.5
 -- #####################################
 -- #########        APPS        ########
 -- #####################################
-hl.bind("CTRL" .. " + grave",  hl.dsp.exec_cmd("kitty"))
+hl.bind("CTRL + grave",  			 hl.dsp.exec_cmd("kitty"))
+hl.bind("SUPER + F",  					 hl.dsp.exec_cmd("firefox"))
+hl.bind("SUPER + SPACE", 			 hl.dsp.exec_cmd("rofi -show drun -display-drun '>>'"))
 
-hl.bind("SUPER + Q", 	   hl.dsp.window.close())
-hl.bind("SUPER + V", 		 hl.dsp.window.float({ action = "toggle" }))
-hl.bind("SUPER + SPACE", hl.dsp.exec_cmd("rofi -show drun -display-drun '>>' -normal-window"))
+hl.bind("SUPER + Q", 	   			 hl.dsp.window.close())
+hl.bind("SUPER + V", 		 			 hl.dsp.window.float({ action = "toggle" }))
 
 -- #####################################
 -- #########     WORKSPACES     ########

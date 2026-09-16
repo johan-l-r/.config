@@ -1,27 +1,33 @@
 return {
-  "stevearc/oil.nvim",
+	{
+		"stevearc/oil.nvim",
 
-  dependencies = "nvim-tree/nvim-web-devicons", 
+		dependencies = "nvim-tree/nvim-web-devicons", 
 
-  lazy = false,
+		lazy = false,
 
-	config = function()
-		require("oil").setup({
-			default_file_explorer = true, 
+		config = function()
+			require("oil").setup({
+				default_file_explorer = true, 
 
-			columns = {
-				"icon", 
-				"permissions"
-			}, 
-			view_options = {
-				show_hidden = true
-			}, 
-			keymaps = {
-				[ "o" ] = "actions.select", 
-				[ "q" ] = { "actions.close", mode = "n" }
-			}
-		})
+				columns = {
+					"icon", 
+					"permissions"
+				}, 
+				view_options = {
+					show_hidden = true
+				}, 
+				keymaps = {
+					[ "o" ] = "actions.select", 
+					[ "q" ] = { "actions.close", mode = "n" }
+				}
+			})
 
-		vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
-	end
+			vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+		end
+	}, 
+	{
+		"benomahony/oil-git.nvim",
+		dependencies = { "stevearc/oil.nvim" },
+	}	
 }
