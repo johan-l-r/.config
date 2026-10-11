@@ -1,0 +1,13 @@
+{
+	"layer": "top", 
+	"position": "top",
+	"width": 50,
+	"height": 10, 
+
+	"modules-left": [ "clock" ], 
+
+	"clock": {
+		"interval": 1,
+		"format": "  {:%H:%M:%S  %d/%m/%Y} "
+	}
+}
