@@ -1,13 +1,30 @@
 {
 	"layer": "top", 
 	"position": "top",
-	"width": 50,
-	"height": 10, 
+	"margin": "10 10 0 10", 
 
-	"modules-left": [ "clock" ], 
+	"modules-left": [
+		"hyprland/workspaces", 
+		"hyprland/window", 
+	], 
+	"modules-center": [ "clock" ], 
+
 
 	"clock": {
 		"interval": 1,
-		"format": "  {:%H:%M:%S  %d/%m/%Y} "
+		"format": "  {:%H:%M:%S %d/%m/%Y} "
+	},
+
+	"hyprland/window": {
+		"format": "{class}", 
+		"tooltip-format": "{title}", 
+	}, 
+	"hyprland/workspaces": {
+		"format": "{name}{windows}", 
+		"window-rewrite": {
+			"class<steam>": "", 
+			"class<firefox>": "", 
+			"class<kitty>": ""
+		}
 	}
 }
