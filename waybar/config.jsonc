@@ -7,12 +7,16 @@
 		"hyprland/workspaces", 
 		"hyprland/window", 
 	], 
-	"modules-center": [ "clock" ], 
-
+	"modules-center": [ 
+		"clock" 
+	], 
+	"modules-right": [
+		"custom/power"
+	], 
 
 	"clock": {
-		"interval": 1,
-		"format": "  {:%H:%M:%S %d/%m/%Y} "
+    "locale": "en_US.UTF-8",
+		"format": "  {:L%H %M    %d %m %Y} "
 	},
 
 	"hyprland/window": {
@@ -26,5 +30,17 @@
 			"class<firefox>": "", 
 			"class<kitty>": ""
 		}
+	}, 
+
+	"custom/power": {
+		"exec": "$HOME/.config/waybar/custom/power.sh", 
+		"menu-file": "~/.config/waybar/menu/powermenu.xml",  
+		"menu": "on-click", 
+		"menu-actions": {
+			"poweroff": "poweroff", 
+			"reboot": "reboot"
+		}, 
+		"format": "", 
+		"tooltip": false
 	}
 }
