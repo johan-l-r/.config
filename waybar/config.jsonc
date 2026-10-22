@@ -33,14 +33,8 @@
 	}, 
 
 	"custom/power": {
-		"exec": "$HOME/.config/waybar/custom/power.sh", 
-		"menu-file": "~/.config/waybar/menu/powermenu.xml",  
-		"menu": "on-click", 
-		"menu-actions": {
-			"poweroff": "poweroff", 
-			"reboot": "reboot"
-		}, 
 		"format": "", 
+		"on-click": "~/.config/scripts/power.sh",
 		"tooltip": false
 	}
 }
